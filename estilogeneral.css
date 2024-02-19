@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400;600;700&family=Gowun+Batang&display=swap');
+
+/*
+font-family: 'Anton', sans-serif;
+font-family: 'Cinzel', serif;
+font-family: 'Gowun Batang', serif;
+font-family: "Open Sans", sans-serif;
+*/
+
+
+/*ESTILOS GENERALES*/
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+h1,h2,h3{
+	font-family: 'Cinzel', serif;
+}
+
+
+/*estilos del nav*/
+.nav1 {
+	background-color: #fcf4f1 !important; 
+	font-size: 1.1em;
+}
+
+.bg-element-nav {
+	background-color: #B8A199 !important;
+	box-shadow: -2px -2px 3px 1px #917F79 !important;
+	border: none !important;
+	
+}
+
+.navbar img {
+	margin-right: 2%;
+	width: 150px;
+}
+/*Estilos pie de pagina*/
+footer{
+	background-color: #fcf4f1 !important;
+}
+
+footer ul a{
+	text-decoration: none;
+	color: white; /*Color texto blanco*/
+/*	font-size: 1.2em;*/
+	 position:relative;
+    display:block; /*Que ocupe todo lo ancho*/
+    width:45px;
+    height:45px;
+    background:#B8A199;
+    text-align:center;
+    box-shadow:0 0 0 3px #B8A199;
+    overflow:hidden;
+    border-radius:50%;
+}
+footer i{
+	position:relative;
+    font-size:25px;
+    width:100%;
+    height:100%;
+    line-height:60px; /*Per centrar la icona verticalment*/
+    transition:0.3s; /*Transició per als propers canvis*/
+}
+footer i:hover{
+	transform:translateY(-100%); /*Desplaza iciono hacia arriba*/
+    color:#B8A199; /*Cambia el color del icono a marron*/
+}
+
+footer ul a:before{
+	content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:white; /*fondo del subelemento*/
+    transform-origin:top; /*Origen de la transicion*/
+    transform:scaleY(0); /*Invisible el elemento*/
+    transition:transform 0.3s;
+}
+
+footer ul a:hover:before{
+	transform:scaleY(1); /*Se muestra el elemento hecho invisible antes*/
+}
+
+footer ul a:hover i {
+    color: #B8A199; /*Color del icono cuando se ha hecho el before del a*/
+}
+
+/*INDEX.HTML*/
+/*estilos sec1*/
+.bg-gradient{
+	height: 87.5vh;
+	background: red url(fotos/inicio.jpg) no-repeat center center scroll !important;
+	background-size: cover !important;
+}
+
+#texto1{
+	height: 87.5vh !important;
+	display: flex !important;
+	justify-content: left !important;
+	align-items: left !important;
+	background: url(https://static.vecteezy.com/system/resources/previews/021/104/224/non_2x/pink-corner-gradient-free-png.png) no-repeat bottom right fixed !important;
+	background-size: cover !important;
+	/*justify-content: left !important;
+	align-items: left !important;
+	background: url(https://static.vecteezy.com/system/resources/previews/021/103/920/non_2x/background-corner-gradient-free-png.png) no-repeat bottom right fixed !important;
+	background-size: cover !important;*/
+}
+
+.caja{
+	display: flex !important;
+	justify-content: flex-end !important;
+	align-items: left !important;
+	flex-direction: column !important;
+
+	width: 40%;
+	
+	padding-bottom: 100px;
+	padding-left: 50px;
+}
+
+.sec1-p1{
+	font-size: 1.2em;
+}
+
+.btn-sec1{
+	text-decoration: none;
+	border: solid 1px black;
+	border-radius: 20px;
+	width: 150px;
+	text-align: center;
+	transition: all 2s;
+}
+
+.btn-sec1:hover{
+	background-color: #B8A199 !important;
+}
+
+/*sec3*/
+/*.caja-sec3{
+	width: 40%;
+}*/
+
+.caja-sec3{
+	background-color: #fcf4f1;
+	border-radius: 10px;
+	width: 40%;
+}
+
+.caja-sec3 img{
+	transition: all 1.5s ease;
+}
+.caja-sec3 img:hover{
+	filter: grayscale(40%);
+	opacity: 0.7;
+}
+.caja-sec3 p{
+
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+}
+.boton-sec3 {
+	text-decoration: none;
+	font-weight: bolder;
+	background: #B8A199;
+  	color: white; /* color de fuente */
+  	padding: 16px 20px;
+  	border-radius: 3px; /* redondear bordes */
+  	position: relative;
+  	z-index: 1;
+  	overflow: hidden;
+  	display: inline-block;
+  	display: flex;
+  	align-items: center;
+}
+
+.boton-sec3::after{
+	content: "";
+  	background: #8C746C; /* color de fondo hover */
+  	position: absolute;
+  	z-index: -1;
+  	padding: 16px 20px;
+  	display: block;
+  	top: 0;
+  	bottom: 0;
+  	left: 100%;
+  	right: -100%;
+  	-webkit-transition: all 0.35s;
+  	transition: all 0.35s;
+}
+
+.boton-sec3:hover:after{
+	left: 0;
+  	right: 0;
+  	top: 0;
+ 	 bottom: 0;
+  	-webkit-transition: all 0.35s;
+  	transition: all 0.35s;
+}
+/*CONTACTO.HTML*/
+
+#bg-contacto{
+/*	background-color: #1F2E42;*/
+/*	background-color: #584842;*/
+	background-color: #C6CEBE;
+	height: 65vh;
+}
+
+#bg-contacto h1{
+	font-size:4em;
+	color: #585858;
+}
+
+.caja-icono{
+	width:100px !important;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+#iconos-contacto{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40%;
+	height: 20%;
+	width: 30%;
+	margin-top: 100px;
+}
+
+#iconos-contacto i{
+	font-size: 7em;
+	display: inline-block;
+	position: relative;
+	padding-bottom: 5px;
+	color: #585858 !important;
+}
+
+#iconos-contacto i:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	bottom: 0;
+	left: 0;
+	background-color: #585858;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.6s ease-out;
+}
+
+#iconos-contacto i:hover:after{
+	transform: scaleX(1.0);
+	transform-origin: bottom left;
+}
+
+/*formulario de contacto*/
+
+#form{
+	height: 100% !important;
+	margin-bottom: 20px;
+}
+
+#izquierda{
+	width: 40%;
+	padding-top: 40px;
+	padding-left: 20px;
+	background-color: #585858;
+	text-align: center;
+}
+
+#derecha{
+	width: 40%;
+	padding-top: 40px;
+	padding-left: 20px;
+	border: solid 2px #c6cfbe;
+}
+
+#derecha form{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+
+#derecha form label{
+	width: 92%;
+/*	border: solid thin black;*/
+/*	border-radius: 20px;*/
+border-bottom: solid thin black;
+	padding: 5px;
+}
+
+#derecha input{
+	width: 92%;
+/*	border-radius: 20px;*/
+/*	padding-left: 10px;*/
+	border: none !important;
+}
+#derecha input:focus{
+	outline: none;
+}
+
+#mensaje{
+	height: 100px;
+}
+
+#mensaje1{
+	display: flex;
+}
+#enviar{
+	padding: 10px !important;
+	background-color: #b8a199;
+	color: white;
+	margin-bottom: 20px;
+}
+
+#izquierda h2{
+	width: 95% !important;
+	text-align: center;
+}
+
+#derecha h2{
+	text-align: center;
+}
+
+#izquierda img{
+	width: 55%;
+}
+
+
+/*BOTIGA.HTML*/
+
+.caja-tienda{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	box-shadow: 1px 1px 3px 1px #c6cfbe !important;
+	border: solid 3px #c6cfbe;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	width: 430px;
+}
+.caja-tienda p{
+	width: 80%;
+	text-align: center;
+}
+
+.caja-tienda a{
+	border: solid thin white;
+	background-color: #8C746C;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+	transition: all 1.5s;
+}
+
+.caja-tienda a:hover{
+	background-color: #B8A199;
+}
+
+/*PRODUCTO.HTML --> engloba a todos los productos*/
+
+.caja-compra {
+/*	border: solid thin black;*/
+/*	margin-top: 70px;*/
+/*	margin-bottom: 70px;*/
+display: flex;
+justify-content: center;
+align-items: center;
+	height: 80vh;
+}
+
+.caja-compra img{
+	width: 100%;
+}
+
+.caja-compra p{
+	width: 70%;
+}
+
+.caja-d{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 50px;
+	background-color: #fcf4f1;
+	padding-left: 30px;
+	border-radius: 10px;
+	margin-top: 0px !important;
+}
+
+#botones{
+	display: flex;
+	flex-direction: column !important;
+}
+
+#botones button{
+	width: 40px;
+}
+
+.caja-compra h2{
+	font-size: 3.5em !important;
+	padding-top: 20px;
+}
+
+.caja-compra a{
+	padding-bottom: 20px;
+}
+
+
+#botones1{
+	display: flex;
+	gap: 10px;
+}
+
+#precio span{
+	padding-right: 10px;
+}
+
+.caja-d h2 {
+	font-size: 42px;
+	
+}
+
+#botones button {
+	text-decoration: none;
+	font-weight: bolder;
+	background: #B8A199;
+  	color: white; /* color de fuente */
+  	border-radius: 3px; /* redondear bordes */
+  	position: relative;
+  	z-index: 1;
+  	overflow: hidden;
+  	display: inline-block;
+  	display: flex;
+  	align-items: center;
+  	border: none;
+  	display: flex;
+  	justify-content: center;
+  	text-align: center;
+  	width: 10%;
+  	box-shadow: 1px 1px 3px 1px #8C746C !important;
+}
+
+#botones button::after{
+	content: "";
+  	background: #8C746C; /* color de fondo hover */
+  	position: absolute;
+  	z-index: -1;
+/*  	padding: 16px 20px;*/
+  	display: block;
+  	top: 0;
+  	bottom: 0;
+  	left: 100%;
+  	right: -100%;
+  	-webkit-transition: all 0.35s;
+  	transition: all 0.35s;
+}
+
+#botones button:hover:after{
+	left: 0;
+  	right: 0;
+  	top: 0;
+ 	 bottom: 0;
+  	-webkit-transition: all 0.35s;
+  	transition: all 0.35s;
+}
+
+
+
+.caja-compra a:hover{
+	    border: solid thin white;
+    background-color: #8C746C;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 1.5s;
+}
+
+.caja-compra a{
+	border: solid thin white;
+	background-color: #B8A199;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+	transition: all 1.5s;
+	width: 150px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.caja-compra a:hover{
+	background-color: #8C746C;
+}
+
+.caja-compra span, #total{
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
